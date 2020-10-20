@@ -2,9 +2,9 @@
 ---
 ---
 ---
-> **Used Packages:** `canvas` and `latest-version`
+> **Used Packages:** `canvas`
 ---
-> **Kullanılan Modüller:** `canvas` ve `latest-version`
+> **Kullanılan Modüller:** `canvas`
 ---
 ---
 ---
@@ -97,7 +97,7 @@ if (input !== newCaptcha.code) {
 ---
 ---
 ---
-> **0.0.3 ▸ New developer (Roalia#0001) added, the number of lines has been reduced, automatic update!**
+> **0.0.3 ▸ New developer (Roalia#0001) added, the number of lines has been reduced, automatic update add!!**
 ---
 > **0.0.2 ▸ A small bug was fixed!**
 ---
