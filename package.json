@@ -1,0 +1,22 @@
+{
+  "bundleDependencies": false,
+  "dependencies": {
+    "canvas": "latest",
+	"latest-version": "latest"
+  },
+  "deprecated": false,
+  "description": "rCaptcha Human Verification | by Swôth#9990 & Roalia#0001",
+  "keywords": [
+  "rennia",
+  "roalia",
+	"swoth",
+	"captcha",
+	"human",
+	"verification",
+	"rcaptcha"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "rcaptcha",
+  "version": "0.0.3"
+}
