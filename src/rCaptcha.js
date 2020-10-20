@@ -1,8 +1,41 @@
 //||===---===---===---===---[===]---===---===---===---===||\\
 
 const Canvas = require('canvas');
-const lang = require('./lang.json')
+const child_process = require('child_process');
+const lang = require('./lang.json');
+const request = require('getweb');
 const error = lang.errors
+
+//||===---===---===---===---[===]---===---===---===---===||\\
+
+const roaliaVersion = request.get('https://registry.npmjs.org/rcaptcha');
+const roaliaJson = JSON.parse(roaliaVersion.body);
+const sonVer = roaliaJson['dist-tags'].latest;
+const kulVer = require('../package.json').version
+if(kulVer !== sonVer) {
+   function bir() {console.log(' [==>]      %10')}
+   function iki() {console.log(' [====>]      %20')}
+   function uc() {console.log(' [=====>]     %40')}
+   function dort() {console.log(' [======>]      %60')}
+   function bes() {console.log(' [========>]     %80')}
+   function altı() {console.log(' [=========>]     %100')}
+   function control() {console.log('Güncelleme Tespit Edildi.')}
+   function download() {console.log('Dosyalar İndiriliyor...')}
+   setTimeout(control, 1000);
+   setTimeout(download, 2000);
+   setTimeout(bir, 3000);
+   setTimeout(iki, 4000);
+   setTimeout(uc, 5000);
+   setTimeout(dort, 6000);
+   setTimeout(bes, 7000);
+   setTimeout(altı, 8000);
+
+    const up = child_process.exec(`npm install rcaptcha`, function (error, stdout, stderr) {
+      if (error) throw error;
+      console.log('Güncelleme Başarılı lütfen tekrar başlatınız.')
+    });
+    return;
+}
 
 //||===---===---===---===---[===]---===---===---===---===||\\
 
@@ -90,6 +123,6 @@ class rCaptcha {
 //||===---===---===---===---[===]---===---===---===---===||\\
 
 module.exports = rCaptcha;
-module.exports.version = require("./package.json").version;
+module.exports.version = require("../package.json").version;
 
 //||===---===---===---===---[===]---===---===---===---===||\\
