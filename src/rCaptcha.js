@@ -6,6 +6,10 @@ const lang = require('./lang.json');
 const request = require('getweb');
 const error = lang.errors
 
+
+class rCaptcha {
+  constructor(rCaptcha) {
+
 //||===---===---===---===---[===]---===---===---===---===||\\
 
 const roaliaVersion = request.get('https://registry.npmjs.org/rcaptcha');
@@ -21,6 +25,13 @@ if(kulVer !== sonVer) {
    function altı() {console.log(' [=========>]     %100')}
    function control() {console.log('Güncelleme Tespit Edildi.')}
    function download() {console.log('Dosyalar İndiriliyor...')}
+   function güncelle() {
+   const up = child_process.exec(`npm install rcaptcha`, function (error, stdout, stderr) {
+      if (error) throw error;
+      console.log('Güncelleme Başarılı lütfen tekrar başlatınız.')
+    });
+   }
+
    setTimeout(control, 1000);
    setTimeout(download, 2000);
    setTimeout(bir, 3000);
@@ -29,18 +40,10 @@ if(kulVer !== sonVer) {
    setTimeout(dort, 6000);
    setTimeout(bes, 7000);
    setTimeout(altı, 8000);
-
-    const up = child_process.exec(`npm install rcaptcha`, function (error, stdout, stderr) {
-      if (error) throw error;
-      console.log('Güncelleme Başarılı lütfen tekrar başlatınız.')
-    });
-    return;
+   setTimeout(güncelle, 10000);
 }
 
 //||===---===---===---===---[===]---===---===---===---===||\\
-
-class rCaptcha {
-  constructor(rCaptcha) {
 
 //||===---===---===---===---[===]---===---===---===---===||\\
 
