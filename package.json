@@ -1,22 +1,40 @@
 {
-  "bundleDependencies": false,
-  "dependencies": {
-    "canvas": "latest",
-	"latest-version": "latest"
-  },
-  "deprecated": false,
-  "description": "rCaptcha Human Verification | by Swôth#9990 & Roalia#0001",
-  "keywords": [
-  "rennia",
-  "roalia",
-	"swoth",
-	"captcha",
-	"human",
-	"verification",
-	"rcaptcha"
-  ],
-  "license": "MIT",
-  "main": "index.js",
   "name": "rcaptcha",
-  "version": "0.0.3"
+  "version": "0.0.4-beta",
+  "description": "rCaptcha Human Verification | by Swôth#9990 & Roalia#0001",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Swothh/rCaptcha.git"
+  },
+  "dependencies": {
+		"canvas": "latest",
+    "getweb": "latest",
+    "child_process": "latest",
+    "deasync": "latest",
+    "exec": "latest"
+	},
+  "keywords": [
+    "rennia",
+    "roalia",
+    "swoth",
+    "captcha",
+    "human",
+    "verification",
+    "rcaptcha",
+    "dogrulama",
+    "doğrulama",
+    "insan",
+    "doğrulaması",
+    "fake"
+  ],
+  "author": "Roalia#0001 & Swôth#9990",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Swothh/rCaptcha/issues"
+  },
+  "homepage": "https://github.com/Swothh/rCaptcha#readme"
 }
