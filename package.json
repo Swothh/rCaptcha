@@ -1,6 +1,6 @@
 {
   "name": "rcaptcha",
-  "version": "v1.0.0",
+  "version": "v1.0.1",
   "description": "rCaptcha Human Verification | by Swôth#9990 & Loiren#0555 & Roalia#0001",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
