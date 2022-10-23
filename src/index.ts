@@ -35,7 +35,15 @@ export class rCaptcha implements IrCaptcha {
 
             let response = canvas.toDataURL();
             let buffer = canvas.toBuffer();
-            return response
+            return {
+                text: captcha,
+                difficulty: this.difficulty,
+                length: this.length,
+                response: {
+                    dataURL: response,
+                    buffer: buffer
+                }
+            }
         } else {
             const canvas = Canvas.createCanvas(900, 300);
             const ctx = canvas.getContext('2d');
@@ -50,7 +58,7 @@ export class rCaptcha implements IrCaptcha {
             ctx.strokeText(captcha, canvas.width / 2, canvas.height / 1.7);
             let response = canvas.toDataURL();
             let buffer = canvas.toBuffer();
-            return response /*{
+            return {
                 text: captcha,
                 difficulty: this.difficulty,
                 length: this.length,
@@ -58,7 +66,7 @@ export class rCaptcha implements IrCaptcha {
                     dataURL: response,
                     buffer: buffer
                 }
-            }*/
+            }
         }
     };
 };
