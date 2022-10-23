@@ -1,0 +1,1 @@
+export { IrCaptcha } from "./rCaptcha";

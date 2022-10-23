@@ -1,108 +1,47 @@
 ## rCaptcha® | Human Verification
+![npm](https://img.shields.io/npm/v/rcaptcha?label=npm&style=for-the-badge)
+![npm](https://img.shields.io/npm/dt/rcaptcha?style=for-the-badge)
+<br />
+
+> Used Packages: `canvas`
+
+### **Installation**
 ---
----
----
-> **Used Packages:** `canvas`
----
-> **Kullanılan Modüller:** `canvas`
----
----
----
-> **Developer:** `Swôth#9990` and `Roalia#0001`
----
-> **Geliştirici:** `Swôth#9990` ve `Roalia#0001`
----
----
----
-#### Usage / Kullanım
----
----
----
+```shell
+npm i --save rcaptcha
+yarn add rcaptcha
 ```
-EN: First we have to define the package.
-TR: İlk olarak modülü tanımlamalıyız.
-```
+---
+### **Usage / Kullanım**
+---
 ```js
-const rCaptcha = require('rcaptcha')
-```
----
-```
-EN: Let's see how to create a captcha.
-TR: Nasıl captcha oluşturulduğuna bakalım.
-```
-```js
-const rCaptcha = require('rcaptcha')
+import { rCaptcha } from 'rcaptcha'; // ESM
+const { rCaptcha } = require('rcaptcha') // CJS
 const newCaptcha = new rCaptcha({
-    language: "", // TR or EN is available...
-    difficulty: "", // EASY, MEDIUM, HARD, VERYHARD is available...
-    length: 4, // Length is must me between 4 and 12...
-})
-```
----
-```
-EN: Let's see the response.
-TR: Yanıtı görelim.
-```
-```js
-const rCaptcha = require('rcaptcha')
-const newCaptcha = new rCaptcha({
-    language: "EN", // TR or EN is available...
-    difficulty: "HARD", // EASY, MEDIUM, HARD, VERYHARD is available...
-    length: 10, // Length is must me between 4 and 12...
-})
-console.log(newCaptcha)
-//Console:
+    difficulty: "VERYHARD", // EASY, MEDIUM, HARD, VERYHARD is available...
+    length: 10, //Length can be minimum 5, maximum 10.
+    captcha: {
+        backgroundColor: '#296CBC',
+        textColor: '#fff',
+        strokeColor: '#00000',
+        backgroundImage: 'https://super-secret-image-url.com'
+    } // Captcha settings is optional
+});
+
+let response = await newCaptcha.generate();
+
+console.log(response);
 /*
 {
-    language: "EN",
     difficulty: "HARD",
     length: 10,
-    code: "KJADJAD", // random
-    image: {
-        url: "imageurl",
+    code: "csf3#", // random
+    response: {
+        dataURL: "imageurl",
         buffer: "buffercode"
     }
 }
 */
 ```
 ---
-```
-EN: Let's move on to using Captcha.
-TR: Captcha kullanımına geçelim.
-```
-```js
-const rCaptcha = require('rcaptcha')
-const newCaptcha = new rCaptcha({
-    language: "EN", // TR or EN is available...
-    difficulty: "HARD", // EASY, MEDIUM, HARD, VERYHARD is available...
-    length: 10, // Length is must me between 4 and 12...
-})
-
-// captcha image link: newCaptcha.image.url
-// example in discord.js: const x = new Discord.MessageAttachment(newCaptcha.image.buffer)
-// example in html: <img src=" + newCaptcha.image.url + ">
-
-const input = "TEST" // your input
-if (input !== newCaptcha.code) {
-    console.log("Captcha failed!")
-} else {
-    console.log("Captcha was passed!")
-}
-```
----
----
----
----
-#### Updates / Güncellemeler
----
----
----
-> **0.0.3 ▸ New developer (Roalia#0001) added, the number of lines has been reduced, automatic update add!!**
----
-> **0.0.2 ▸ A small bug was fixed!**
----
-> **0.0.1 ▸ Package created and published on NPM**
----
----
----
-> **by `Swôth#9990` and `Roalia#0001` (MIT)**
+> Developed with 💙 by `Loiren`, `Swôth`. **(MIT)**

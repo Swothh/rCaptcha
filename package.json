@@ -1,26 +1,28 @@
 {
   "name": "rcaptcha",
-  "version": "0.0.4-beta",
-  "description": "rCaptcha Human Verification | by Swôth#9990 & Roalia#0001",
-  "main": "index.js",
+  "version": "v1.0.0",
+  "description": "rCaptcha Human Verification | by Swôth#9990 & Loiren#0555 & Roalia#0001",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "node index.js"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Swothh/rCaptcha.git"
   },
+  "devDependencies": {
+    "@types/node": "^18.11.3",
+    "typescript": "^4.8.4"
+  },
   "dependencies": {
-		"canvas": "latest",
-    "getweb": "latest",
-    "child_process": "latest",
-    "deasync": "latest",
-    "exec": "latest"
-	},
+    "canvas": "^2.10.1"
+  },
   "keywords": [
     "rennia",
     "roalia",
     "swoth",
+    "loiren",
     "captcha",
     "human",
     "verification",
@@ -31,7 +33,7 @@
     "doğrulaması",
     "fake"
   ],
-  "author": "Roalia#0001 & Swôth#9990",
+  "author": "Roalia#0001 & Swôth#9990 & Loiren#0555",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Swothh/rCaptcha/issues"
