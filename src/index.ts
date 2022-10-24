@@ -40,6 +40,7 @@ export class Captcha implements IrCaptcha {
             let buffer = canvas.toBuffer();
             return {
                 text: captcha,
+                keywords: this.keywords ?? null,
                 difficulty: this.difficulty,
                 length: this.length,
                 response: {
@@ -63,6 +64,7 @@ export class Captcha implements IrCaptcha {
             let buffer = canvas.toBuffer();
             return {
                 text: captcha,
+                keywords: this.keywords ?? null,
                 difficulty: this.difficulty,
                 length: this.length,
                 response: {
