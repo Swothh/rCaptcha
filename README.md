@@ -15,11 +15,12 @@ yarn add rcaptcha
 ### **Usage / Kullanım**
 ---
 ```js
-import { rCaptcha } from 'rcaptcha'; // ESM
-const { rCaptcha } = require('rcaptcha') // CJS
+import { Captcha } from 'rcaptcha'; // ESM
+const { Captcha } = require('rcaptcha') // CJS
 const newCaptcha = new rCaptcha({
     difficulty: "VERYHARD", // EASY, MEDIUM, HARD, VERYHARD is available...
     length: 10, //Length can be minimum 5, maximum 10.
+    keywords: 'super-secret-keywords', // optional
     captcha: {
         backgroundColor: '#296CBC',
         textColor: '#fff',
@@ -33,9 +34,10 @@ let response = await newCaptcha.generate();
 console.log(response);
 /*
 {
-    difficulty: "HARD",
+    difficulty: "VERYHARD",
+    keywords: 'super-secret-keywords',
     length: 10,
-    code: "csf3#", // random
+    code: "super-secret-keywords", // random
     response: {
         dataURL: "imageurl",
         buffer: "buffercode"
